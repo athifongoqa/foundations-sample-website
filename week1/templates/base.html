@@ -2,20 +2,25 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- the page title will be a varible passed to the render_template() function for each page separately-->
-    <title> {{ page_title }}</title>
-  	<meta charset="utf-8"/>
-    <!-- include the css from the file static/style.css -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
-  <body>
+
+<head>
+  <!-- the page title will be a varible passed to the render_template() function for each page separately-->
+  <title> {{ page_title }}</title>
+  <meta charset="utf-8" />
+  <!-- include the css from the file static/style.css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
 
   <!-- this headline will appear on all pages. -->
   <header>
     <div class="banner">
-      <h1> All about CODE </h1> 
-      <h3> A really great place. </h3>
+      <nav id="nav-bar" style="position:fixed">
+        <a class="nav-link" href="/">Concept</a>
+        <a class="nav-link" href="/second-page">Admissions</a>
+        <a class="nav-link" href="/third-page">About</a>
+      </nav>
     </div>
   </header>
 
@@ -26,6 +31,6 @@
     {% endblock %}
   </main>
   <footer>
-    <h3> Made with love </h3>
+    <h3> Made by Athi </h3>
   </footer>
-  </body>
+</body>

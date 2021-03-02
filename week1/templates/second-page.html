@@ -1,12 +1,46 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> By looking at the website in your browser and seeing this code in your editor, 
-    maybe you can start to see what is going on. There are some things that we want on 
-    every page, like the header or the footer, so we will code that once in the file base.html, 
-    and use that as a building block in other files to create the specific pages we need. 
-
-    This is a key principle of software engineering, called Don't Repeat Yourself, or the DRY principle. 
-    The core idea is to make mistakes in your code in exactly one place and reuse that code everywhere, instead 
-    of copy-pasting your buggy code all over the place. It is much harder to fix that way. 
+<img src="https://code.berlin/content/uploads/0a64a692-1800x1200.jpg" alt="Picture">
+<h3><strong>You can start applying now!</strong></h3>
+<h4>Application deadlines: EU residents: 15th of July 2021; applicants requiring a study visa: 6th of June</h4>
+<section class="schedule">
+    <br>
+    <br>
+    <br>
+    <h2>
+        Apply now:
+    </h2>
+    <p>
+        By registering for our application process, you will receive an email from us with an invitation to set up your
+        personal account.
+        If you don’t confirm your account, we will delete the account after three weeks and you would need to signup
+        again.
+    </p>
+    <form id="form" action="https://i.redd.it/fl5rblibu8l31.jpg">
+        <div>
+            <label for="email">Enter your Email:</label><br /><br />
+            <input id="email" type="email" placeholder="Email Address" required />
+        </div>
+        <br />
+        <div>
+            <label for="place">Enter your name:</label><br /><br />
+            <input type="text" id="place" name="place" placeholder="Name" /><br />
+        </div>
+        <br />
+        <div>
+            <label for="idnum">Enter your surname:</label><br /><br />
+            <input type="text" id="idnum" name="idnum" placeholder="Surname" /><br />
+        </div>
+        <br />
+        <div>
+            <label for="date">Schedule date & time to speak to a team member:</label><br /><br />
+            <input type="datetime-local" id="date" name="date" /><br />
+        </div>
+        <br />
+        <div>
+            <input id="submit" type="submit" />
+        </div>
+    </form>
+</section>
 {% endblock %}
