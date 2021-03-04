@@ -18,7 +18,7 @@ def get_color_code(color_name):
     # logging.basicConfig(filename='log.txt', filemode='w',
     #                     format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG) # noqa
 
-    with open("data/css-color-names.json") as my_data_file:
+    with open("color_check/data/css-color-names.json") as my_data_file:
         my_data = json.load(my_data_file)
 
         # logging.debug('Form entry: %s', color_name)
