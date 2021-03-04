@@ -25,7 +25,7 @@ def show_color():
     user_submitted_string = request.form['color']
     color_hex_code = get_color_code(user_submitted_string)
 
-    return render_template('color.html', page_title="Show Color", color_hex=color_hex_code, user_submitted_string=user_submitted_string)
+    return render_template('color.html', page_title="Show Color", color_hex=color_hex_code, user_submitted_string=user_submitted_string)  # noqa
 
 
 if __name__ == "__main__":

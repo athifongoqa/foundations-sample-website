@@ -16,7 +16,7 @@ def get_color_code(color_name):
     color_name = color_name.lower().strip()
 
     # logging.basicConfig(filename='log.txt', filemode='w',
-    #                     format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+    #                     format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG) # noqa
 
     with open("data/css-color-names.json") as my_data_file:
         my_data = json.load(my_data_file)
@@ -32,12 +32,3 @@ def get_color_code(color_name):
                 # logging.exception("Exception occurred")
                 hex_code = "Try again!"
                 return hex_code
-
-    # f = open("data/css-color-names.json", "r")
-    # data = f.readline()
-    # for k in data:
-    #     if k == color_name:
-    #         hex_code = data[k]
-    #         return hex_code
-    #     else:
-    #         raise Exception("Try again, my dude!")
