@@ -9,6 +9,10 @@ handlers:
 - url: /static
   static_dir: styles
 
+handlers:
+- url: /color_check/static
+  static_dir: color_check/static
+
 - url: /.*
   secure: always
   redirect_http_response_code: 301
