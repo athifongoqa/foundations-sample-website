@@ -4,11 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-<<<<<<< HEAD
+
     return '<h1>Hello, Everyone!</h1>'
-=======
     return '<h1>Hello, Class!</h1>'
->>>>>>> upstream/main
 
 
 if __name__ == "__main__":
