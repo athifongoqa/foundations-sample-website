@@ -13,7 +13,7 @@ def get_color_code(color_name):
     # this is where you should add your logic to check the color.
     # Open the file at data/css-color-names.json, and return the hex code
     # The file can be considered as JSON format, or as a Python dictionary.
-    color_name = color_name.lower().strip()
+    # color_name = color_name.lower().strip()
 
     # logging.basicConfig(filename='log.txt', filemode='w',
     #                     format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG) # noqa
