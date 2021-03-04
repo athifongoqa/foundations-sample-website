@@ -39,5 +39,7 @@ def test_colors_bad():
 
 def test_colors():
     with app.test_client() as test_client:
-        response = test_client.post('/color', data={'key': 'value'})
+        response = test_client.post('/color', data=dict({
+            'color': 'red'
+        }))
         assert response.status_code == 200
