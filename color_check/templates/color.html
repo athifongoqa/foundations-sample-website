@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p> Well done! You managed to pick: <span style="border:10px solid {{color_hex}}">{{user_submitted_string}}</span>
-    {% endblock %}
+
+{% if color_hex != "Error" -%}
+<p> Well done! You managed to pick: <span
+        style="border:10px solid {{color_hex}}; border-width:100px">{{user_submitted_string}}</span>
+    {% else -%}
+<p>Try again buddy!</p>
+{% endif %}
+
+{% endblock %}
