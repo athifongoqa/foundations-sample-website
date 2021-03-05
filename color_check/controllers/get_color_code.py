@@ -15,7 +15,7 @@ def get_color_code(color_name):
     # The file can be considered as JSON format, or as a Python dictionary.
     color_name = color_name.lower().strip()
 
-    logging.basicConfig(filename='color_check/data/log.txt', filemode='a',
+    logging.basicConfig(filename='/tmp/log.txt', filemode='a',
                         format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)  # noqa
 
     # color_check/data/css-color-names.json on Github
