@@ -61,5 +61,6 @@ function createNewMeeting() {
     .catch(function (err) {
       console.log("Fetch Error, booo!", err);
     });
-  document.getElementById("meeting-form").reset();
+  var reset = document.getElementById("meeting-form");
+  reset.reset();
 }
