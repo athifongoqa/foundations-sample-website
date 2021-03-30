@@ -21,8 +21,13 @@ function getMeetings() {
         // if that passes, print the data to the javascript console on the browser.
         response.json().then(function (data) {
           console.log(data);
-
           // Your Homework: instead of printoing to the cosnole, change what the user sees.
+          var full = document.querySelector("#full");
+          for (let x in data) {
+            var newLi = document.createElement("li");
+            newLi.appendChild(document.createTextNode(data[x]));
+            full.appendChild(newLi);
+          }
         });
       }
     )
@@ -34,6 +39,7 @@ function getMeetings() {
 function createNewMeeting() {
   // creates a new javascript object called form_data, of the type FormData, based on the contents
   // of a form called meeting-form, which is the form defined in index.html.
+
   const form_data = new FormData(document.getElementById("meeting-form"));
   fetch("/api/meetings", {
     method: "POST",
@@ -41,6 +47,7 @@ function createNewMeeting() {
   })
     .then(
       //same basic code as above - catch errors if there are any.
+
       function (response) {
         // if the response is not a 201 OK (resource created), log it.
         if (response.status !== 201) {
@@ -54,4 +61,5 @@ function createNewMeeting() {
     .catch(function (err) {
       console.log("Fetch Error, booo!", err);
     });
+  document.getElementById("meeting-form").reset();
 }

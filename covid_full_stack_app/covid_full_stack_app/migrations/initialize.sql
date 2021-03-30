@@ -1,3 +1,4 @@
 CREATE TABLE Meetings(
-    Name text PRIMARY KEY    
+    person_id INTEGER PRIMARY KEY,
+    name text   
 );
